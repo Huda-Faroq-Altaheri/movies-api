@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>js EXAM</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Huda Faroq Altaheri">
+    <meta name="keywords" content="movie moviedb">
+    <meta name="description" content="movie">
+
+    <!-- Page icon Link -->
+    <link rel="icon" href="images/logo.png">
+
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Page Style Link -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Fontawesome Link -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+</head>
+<body>
+    
+    <!-- ------------------------------------- loadingScreen ------------------------------------------- -->
+    <div class="loadingScreen  align-items-center">
+          <div class="spinner">
+          <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+          </div>
+        </div>
+    </div>
+
+
+
+<!-- ----------------------------------------------Start-NowPlaying ---------------------------------------------------------- -->
+<section id="NowPlaying" id="home">
+    <div class="container w-75 my-5"> 
+    <dic class="row">
+        <div class="col-md-6">
+            <div class="inpt-item">
+                <input id="external-search" type="text" class="form-control" placeholder="&#xf00e get movies by word" style="font-family:Arial, FontAwesome ">
+            </div>    
+        </div>
+        <div class="col-md-6">
+            <div class="inpt-item">
+                <input id="local-search" type="text" class=" form-control" placeholder="&#xf002 search..." style="font-family:Arial, FontAwesome ">
+            </div>    
+        </div>
+    </dic>
+</div> 
+
+<div id="Popular" class="container">
+
+    <div id="displayMovesSearch" class="row my-5">
+    </div>
+    <div id="displayMoves" class="row">
+    </div>
+
+
+</div>
+</section>
+
+<!-- ----------------------------------------------End-NowPlaying ---------------------------------------------------------- -->
+
+<!-- ----------------------------------------------Start-Slide-menu ---------------------------------------------------------- -->
+
+<section id="slide-menu" class=" row  justify-content-center ">
+    
+        <div   class="row align-items-start">
+            <div class="col-md-12">
+            <div class="strip-header-nav">
+                <img src="images/strip.png" alt="strip-logo" class="strip-logo">
+            </div>
+           </div>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-md-12">
+            <div class="strip-toggel-menu">
+                <i class="fa fa-align-justify fs-3"></i>
+            </div>
+            </div>
+        </div>
+
+        <div class="row align-items-end ">
+            <div class="col-md-12">
+              <div class="strip-social-icon">
+                <div class="mb-2">
+                    <i class="fas fa-globe "></i>
+                </div>
+                <div class="mb-2">
+                    <i class="fas fa-share-alt "></i>
+                </div>
+            </div>
+         </div>
+        </div>
+</section>
+<!-- ----------------------------------------------End-Slide-menu ---------------------------------------------------------- -->
+
+
+<!-- --------------------------------------------- Start-strip-navbar ------------------------------------------------------------ -->
+<section id="strip-navbar" class=" row justify-content-center">
+
+    <div class="row align-items-start">
+        <div class="col-md-12">
+            <div>
+                <ul class="list-unstyled p-4">
+                    <li><a  href="#" value="now_playing" class="text-decoration-none text-white link">Now playing</a></li>
+                    <li><a  href="#" value="popular" class="text-decoration-none text-white link">Popular</a></li>
+                    <li><a  href="#" value="top_rated" class="text-decoration-none text-white link">Top Rated</a></li>
+                    <li><a  href="#" value="trending" class="text-decoration-none text-white link-trending">Trending</a></li>
+                    <li><a  href="#" value="upcoming" class="text-decoration-none text-white link">Upcoming</a></li>
+                    <li ><a  href="#contacUs" class="text-decoration-none text-white">Contact Us</a></li>
+                </ul>
+               </div>    
+        </div>
+    </div>
+
+    <div class="row align-items-end">
+        <div class="col-md-12">
+
+            <div class="nav-social-item ">
+                <div class=" w-75 mx-auto">
+                 <a href="#"><i class="fab fa-facebook-f "></i></a>
+                 <a href="#"><i class="fab fa-twitter ms-2"></i></a>
+                 <a href="#"><i class="fas fa-globe fs-5 ms-2"></i></a>
+                </div>
+                <div class="p-3 ">
+                 <span>Copyright Â© 2019 All Rights Reserved.</span>
+                </div>
+            </div>   
+        </div>
+    </div>
+</section>
+
+<!-- --------------------------------------------- End-strip-navbar ------------------------------------------------------------ -->
+
+
+<!-- ----------------------------------------------End-Slide-menu ---------------------------------------------------------- -->
+  
+<!-- ----------------------div-Up ------------------------------------------- -->
+<div class="divUp ">
+    <button class=" fs-3"><i class="fas fa-chevron-up text-white"></i></button>
+</div>
+
+
+<!-- ----------------------------------------------Start-contacUs ---------------------------------------------------------- -->
+ <section id="contacUs" class="my-5">
+    <div class="container">
+        <h3 class="text-white my-5">ContacUs...</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contactus-item">
+                   
+                    <input id="yourName" type="text" class="form-control inp-form" placeholder="Enter Your Name">
+                    <p id="nameAlert" class=" alert alert-danger d-none ">Name must start with capital letter,contains 4:10 characters</p>
+                    
+                    <input id="yourPhone" type="number" class="form-control inp-form" placeholder="Enter Your Phone">
+                    <p id="phoneAlert" class="  alert alert-danger d-none ">The phone must be an Egyptian number consisting of 11 digits</p>
+                    
+                    <input id="yourPassWord" type="password" class="form-control inp-form" placeholder="Enter Your PassWord">
+                    <p id="passAlert" class=" alert alert-danger d-none ">a password must be eight characters including one uppercase letter, one special character and alphanumeric characters?</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="contactus-item">
+                    
+                    <input id="yourEmail" type="email" class="form-control inp-form" placeholder="Enter Your Email">
+                    <p id="emailAlert" class="alert alert-danger d-none">The email begins with any letter or number and must @ and 5 char &contain .com*</p>
+                    
+                    <input id="yourAge" type="number" class="form-control inp-form" placeholder="Enter Your Age">
+                    <p id="ageAlert" class="alert alert-danger d-none ">Age should not be less than 10 years and not more than 60 years</p>
+
+                    <input  id="yourRepassword" type="password" class="form-control inp-form" placeholder="Enter Your RePassWord">
+                    <p id="rePassAlert" class="alert alert-danger d-none ">Confirm Password(The same password you entered previously)</p>
+
+                </div>
+            </div>
+
+        </div>
+        <p id="fill-inpt" class="alert  text-danger fs-4 my-2 text-center"></p>
+        <p id="success" class="alert  text-success fs-4 my-2 text-center"></p>
+        <button id="submit" class=" btn btn-primary "> Submit </button>
+    </div>
+ </section>  
+
+<!-- ----------------------------------------------End-contacUs ---------------------------------------------------------- -->
+
+
+
+
+
+
+    
+
+    <!-- JQuery Link -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- Popper Link -->
+    <script src="js/popper.min.js"></script>
+
+    <!-- Bootstrap Link -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Page Main Script Link -->
+    <script src="js/main.js"></script>
+</body>
+</html>
